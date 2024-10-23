@@ -1,0 +1,691 @@
+:root {
+    --primary-color: #ffffff; /* Este es el color que se cambiará dinámicamente */
+    --secondary-color: #000000; /* Este es el color que se cambiará dinámicamente */
+    --text-color: #000000; /* Este es el color de texto predeterminado */
+    --menu-color:  #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--menu-color);/* Usar la variable de color de texto */
+}
+nav ul li a {
+    color: var(--primary-color); /* Usar la variable de color de texto */
+
+}
+
+.cta-button, .menu a:hover {
+    background-color: var(--secondary-color);
+    color: var(--menu-color);
+}
+.header{
+    background-color: var( --menu-color);
+}
+.menu a {
+    color: var(--primary-color); /* Usar la variable de color de texto */
+}
+.logo{
+    height: 75px;
+}
+.video-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-rating {
+    color: var(--secondary-color);
+}
+
+.highlighted-section {
+    border: 2px solid red;
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos para el menú tipo "bocadillo" */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú deslizante */
+.menu {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease-in-out;
+}
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.content-wrapper {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+.media {
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 70px;
+}
+
+.media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-content h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .media {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .cta-button {
+        align-self: center;
+    }
+}
+
+.gallery-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 20px; /* Añadimos padding para evitar que el contenido toque los bordes en pantallas pequeñas */
+}
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-main {
+    width: 500px;
+    height: 500px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-main img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    max-height: 500px; /* Limita la altura total de la sección de thumbnails */
+    overflow-y: hidden;
+}
+
+.thumbnails-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border: 2px solid #007bff;
+}
+
+/* Estilos para los thumbnails intermedios más grandes */
+.thumbnail:nth-child(2),
+.thumbnail:nth-child(3) {
+    width: 120px; /* Aumenta el tamaño de ancho */
+    height: 120px; /* Aumenta el tamaño de alto */
+}
+
+.up-arrow, .down-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.up-arrow {
+    margin-bottom: 10px;
+}
+
+.down-arrow {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        flex-direction: column; /* Apila la imagen principal y las miniaturas verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .gallery-main {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px; /* Agrega espacio entre la imagen principal y las miniaturas */
+    }
+
+    .gallery-thumbnails {
+        flex-direction: row; /* Coloca las miniaturas en una fila en lugar de una columna */
+        max-width: 100%;
+        max-height: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-left: 0;
+    }
+
+    .thumbnails-wrapper {
+        flex-direction: row;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
+        margin: 0 5px;
+    }
+
+    /* Ajuste del tamaño de los thumbnails grandes en pantallas pequeñas */
+    .thumbnail:nth-child(2),
+    .thumbnail:nth-child(3) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .up-arrow, .down-arrow {
+        display: none; /* Oculta las flechas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+
+    .thumbnail:nth-child(2),
+    .thumbnail:nth-child(3) {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gallery-main {
+        width: 100%;
+    }
+}
+
+/* Servicios Section */
+.services-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #1c1c1c, #0d0d0d); /* Gradiente oscuro */
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: #f0f0f0; /* Texto gris claro */
+    font-weight: 700;
+}
+
+.services-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    color: #f0f0f0; /* Texto gris claro */
+    font-weight: 700;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background: #2b2b2b; /* Fondo gris oscuro para contrastar con el gradiente */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+    width: calc(50% - 2rem); /* Cada tarjeta ocupará la mitad del contenedor menos el espacio de gap */
+    max-width: 500px; /* Establece un ancho máximo para las tarjetas */
+    flex: 1 1 calc(50% - 2rem); /* Establece el ancho flexible para que ocupen la mitad del contenedor */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #009dff; /* Azul brillante para iconos */
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #d1d1d1; /* Texto gris claro */
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative background elements */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 0;
+}
+#button-2{
+    margin-top: 35px;
+}
+.service-card:hover::before {
+    opacity: 1;
+}
+.testimonials-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 20px; /* Añadimos padding para evitar que el contenido toque los bordes en pantallas pequeñas */
+}
+
+/* Estilo general para los botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Color de fondo azul */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación suave para cambios de color */
+    cursor: pointer;
+}
+
+/* Efecto al pasar el cursor por encima */
+.button:hover {
+    background-color: #0056b3; /* Color más oscuro al hacer hover */
+}
+
+/* Estilo adicional para la clase cta-button */
+.cta-button {
+    background-color: #28a745; /* Color verde */
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Color verde más oscuro al hacer hover */
+}
+.featured-testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Asegura que el contenido tome el espacio disponible */
+    margin-bottom: 20px;
+}
+
+.testimonial-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 150px; /* Ajusta según el tamaño necesario */
+    height: 150px; /* Ajusta según el tamaño necesario */
+    border-radius: 50%; /* Para asegurarte de que se mantenga como un círculo */
+}
+.testimonial-text {
+    max-width: 600px;
+    flex: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+
+.testimonial-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.testimonial-text p {
+    margin-bottom: 10px;
+}
+
+.testimonial-rating {
+    font-size: 18px;
+    color: #ffc107;
+}
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.testimonials-carousel {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    overflow-x: auto;
+}
+.small-testimonial.active {
+    border: 2px solid var(--menu-color);
+}
+
+.small-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.small-testimonial.active {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+}
+
+.small-testimonial-image {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.small-testimonial-text p {
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .featured-testimonial {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-image {
+        margin-bottom: 20px; /* Agrega espacio entre la imagen y el texto en pantallas pequeñas */
+    }
+
+    .testimonial-text {
+        max-width: 100%;
+        text-align: center; /* Asegura que el texto esté centrado en pantallas pequeñas */
+    }
+
+    .testimonial-controls {
+        justify-content: center; /* Centra las flechas de control en pantallas pequeñas */
+    }
+
+    .testimonials-carousel {
+        flex-direction: column; /* Asegura que las miniaturas se alineen verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .small-testimonial {
+        width: 80px; /* Reduce el tamaño de las miniaturas en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    .small-testimonial-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-controls button {
+        font-size: 20px; /* Reduce el tamaño de las flechas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-text h3 {
+        font-size: 20px; /* Reduce el tamaño del título en pantallas muy pequeñas */
+    }
+
+    .testimonial-text p {
+        font-size: 14px; /* Reduce el tamaño del texto en pantallas muy pequeñas */
+    }
+
+    .testimonial-rating {
+        font-size: 16px; /* Ajusta el tamaño de las estrellas de calificación en pantallas muy pequeñas */
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+footer .footer-logo img {
+    height: 50px;
+}
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+footer .social-icons img {
+    height: 30px;
+}
+footer .footer-links {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+footer .footer-links a {
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+/* Ocultar la "X" en pantallas grandes */
+@media (min-width: 769px) {
+    .close-menu {
+        display: none;
+    }
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+    
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px; /* Menú inicialmente oculto */
+        height: 100%;
+        width: 250px;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        padding-top: 60px;
+        transform: translateX(0);
+    }
+    
+    .menu.show {
+        transform: translateX(-250px); /* Desliza el menú hacia dentro */
+    }
+     /* Estilos para la "X" de cierre */
+     .close-menu {
+        font-size: 30px;
+        text-align: right;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .business-model .text-block {
+        width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .footer-links {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .gallery h2, .testimonials h2 {
+        font-size: 24px;
+    }
+}
