@@ -1,0 +1,499 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Hero Section */
+.hero {
+    /* Eliminamos la propiedad background-image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    background-image: url("./apple.png");
+}
+
+.hero::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la sección dividida */
+.split-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    gap: 2rem;
+    color: white;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.text-content button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Estilos para la imagen */
+.image-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para la sección de contenido */
+.content-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #66a1c9;
+}
+
+.content-container {
+    margin: 0 auto;
+
+}
+
+.content-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.content-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    width: 50%;
+}
+
+.cta {
+    background-color: #66a1c9;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta:hover {
+    background-color: #66a1c9;
+}
+
+/* Estilos para la sección de tarjetas */
+.cards-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #66a1c9;
+}
+
+.cards-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #66a1c9;
+}
+
+.cards-section p {
+    text-align: center;
+    color: #000000;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    text-align: center;
+    width: 30%;
+    max-width: 350px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+    border-radius: 5px 5px 5px 5px;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 4px 11px rgba(0, 0, 0, 0.5);
+    /* sombra negra */
+
+}
+
+.card:hover img {
+    transform: scale(1.2);
+    /* Ajusta el zoom según lo necesites */
+    overflow: auto;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card button {
+    background-color: #66a1c9;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Estilos para el footer */
+.footer {
+    background-color: #66a1c9;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #FFD700;
+}
+
+.footer-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+.footer img {
+    height: 30px;
+}
+
+/* Estilos para los Bloques de Texto Dinámicos */
+.bloque-texto {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.6s ease-out, transform 1.9s ease-out;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.bloque-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para los Bloques Animados */
+.bloque-animado {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2.9s ease-out, transform 2.9s ease-out;
+}
+
+.bloque-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mantener los colores de fondo para cada bloque */
+#bloque-1 {
+    background-color: #66a1c9;
+    /* Color naranja */
+}
+
+/* Estilos para el Modal (Lightbox) */
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    /* Por encima de otros elementos */
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Habilita scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo oscuro semi-transparente */
+}
+
+/* ... estilos existentes ... */
+
+/* Estilos para las imágenes de la galería */
+.galeria-container {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.galeria {
+    display: flex;
+    width: 1200px;
+    height: 430px;
+}
+
+.galeria img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .3s ease;
+}
+
+.galeria img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* Estilos para el Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    height: auto;
+    animation: zoomIn 0.6s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsividad del modal */
+@media screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Estilos para la nueva sección de testimonios */
+.testimonial-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #66a1c9;
+}
+
+/* Estilos para el carrusel de testimonios */
+.testimonial-carousel {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    overflow: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    max-width: 300px;
+    min-width: 250px;
+    text-align: left;
+    flex-shrink: 0;
+    border-top: 1px groove;
+}
+
+/* Estilos para el contenido de la tarjeta */
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.testimonial-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #66a1c9;
+}
+
+.testimonial-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Estilos para la calificación con estrellas */
+.rating {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
